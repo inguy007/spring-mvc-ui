@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="vendor/css/bootstrap.min.css" />
+    <script src="vendor/js/jquery.min.js"></script>
+    <script src="vendor/js/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/loginController.js"></script>
+</head>
+<body ng-app="spring-mvc">
+    <div ng-controller="loginController" align="center">
+        <div>
+            <header>USER LOGIN</header>
+        </div>
+        <form name="loginForm" ng-submit="formSubmit()" autocomplete="off">
+        <table>
+            <tr>
+                <td><label>User Name</label></td>
+                <td><input type="text" ng-model="userDetails.username"></td>
+            </tr>
+            <tr>
+                <td><label>Password</label></td>
+                <td><input type="password" ng-model="userDetails.password"></td>
+            </tr>
+        </table>
+        <input type="submit" value="submit">
+            </form>
+        {{errorMessage}}
+    </div>
+
+    <div>
+
+    </div>
+</body>
+</html>

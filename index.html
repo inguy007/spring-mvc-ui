@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="vendor/css/bootstrap.min.css"/>
+    <script src="vendor/js/jquery.min.js"></script>
+    <script src="vendor/js/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/loginController.js"></script>
+    <style type="text/css">
+        .center-panel{
+            margin-top: 100px;
+            margin-right: auto;
+            margin-left: auto;
+            width: 80%;
+        }
+    </style>
+</head>
+<body ng-app="spring-mvc">
+<div ng-controller="loginController" align="center" class="panel panel-info center-panel" >
+    <div class="panel-heading">
+        <h3 class="panel-title">USER LOGIN</h3>
+    </div>
+    <br/>
+    <br/>
+
+    <form name="loginForm" ng-submit="formSubmit()">
+        <div class="panel">
+        <table>
+            <tr>
+                <td><label class="control-label">User Name:</label></td>
+                <td><input type="text" ng-model="userDetails.username" class="form-control"></td>
+            </tr>
+            <tr>
+                <td><label class="col-sm-2 control-label">Password:</label></td>
+                <td><input type="password" ng-model="userDetails.password" class="form-control"></td>
+            </tr>
+        </table>
+        </div>
+        <div class="">
+            <input type="submit" value="submit" class="btn btn-info">
+        </div>
+    </form>
+    <div class="alert-danger">
+        {{errorMessage}}
+    </div>
+
+</div>
+</body>
+</html>
